@@ -1,0 +1,5 @@
+ABINITIO_PREDICTION	Augustus	1
+ABINITIO_PREDICTION	busco	1
+PROTEIN	                GeMoMa	10
+TRANSCRIPT	      assembler-rongshanyang_PASA	 50
+OTHER_PREDICTION	GMST	10
