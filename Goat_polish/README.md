@@ -1,4 +1,4 @@
-# T2T goat polish     
+# T2T goat genome polish     
 # Dependencies    
 * Python 3.6+
 * java 11.0+
