@@ -8,7 +8,7 @@ Other dependent softwares were included in the \bin\bin directory
 # Input    
 Low-quality genome fasta file, PacBio long reads, ONT long reads and short reads    
 # Output    
-polished genome .fa file and 
+polished genome .fa file and genome QV
 # Usage    
 1、Input the paths of the required software in the `software.json` file    
 ```
