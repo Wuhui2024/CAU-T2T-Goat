@@ -45,15 +45,22 @@ bash run.sh
 ```
 
 ### assembly     
-includes the code for nextdenovo assembly, hifasm's trio and haploid assembly, and verkko assembly 
+nextdenovo.sh: Preliminary assembly based on ONT reads    
+run-hifiasm.sh: Assembling haploid genome contigs using HiFi reads    
+hifiasm_trio.sh: Assembling haplotype genome using HiFi reads and parental short reads    
+verkko.sh: Preliminary assembly based on HiFi reads and ONT reads
 ### annotation    
-includes the code for repetitive element annotation, non-coding RNA annotation, gene structure prediction, and integration  
+the code for repetitive element annotation, non-coding RNA annotation, gene structure prediction, and integration  
 ### centoremere    
-includes the code for aligning and peak calling of ChIP-seq data, identifying centromere units using SRF, and the identity graph of centromere units using StainedGlass.
-### Hi-C_analysese    
-contains codes for Hi-C scaffolding.    
+ChIP-seq: Aligning ChIP-seq data to the reference genome and performing peak calling
+centromere_unit_identification: identifying centromere units using SRF software
+identity_heatmap: the identity heatmap of centromere units using StainedGlass
+ 
 ### Genome assessment    
-includes the code for genome QV evaluation, SD identification and filtering, as well as methylation calling based on both hifi and ont data separately.
+QV: Evaluating genome QV and completeness based on short reads
+SDs: genome segments duplications(SDs) identification and filtering
+methylation: Calling CpG methylation sites using HiFi reads and ONT reads respectively
+
 
 
 ## Citation    
