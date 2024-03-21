@@ -52,13 +52,13 @@ verkko.sh: Preliminary assembly based on HiFi reads and ONT reads
 ### annotation    
 the code for repetitive element annotation, non-coding RNA annotation, gene structure prediction, and integration  
 ### centoremere    
-ChIP-seq: Aligning ChIP-seq data to the reference genome and performing peak calling
-centromere_unit_identification: identifying centromere units using SRF software
+ChIP-seq: Aligning ChIP-seq data to the reference genome and performing peak calling    
+centromere_unit_identification: identifying centromere units using SRF software    
 identity_heatmap: the identity heatmap of centromere units using StainedGlass
  
 ### Genome assessment    
-QV: Evaluating genome QV and completeness based on short reads
-SDs: genome segments duplications(SDs) identification and filtering
+QV: Evaluating genome QV and completeness based on short reads    
+SDs: genome segments duplications(SDs) identification and filtering    
 methylation: Calling CpG methylation sites using HiFi reads and ONT reads respectively
 
 
