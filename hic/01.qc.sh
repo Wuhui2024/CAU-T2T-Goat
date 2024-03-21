@@ -1,1 +1,0 @@
-/software/fastp/fastp -i /05_Hi-C/00_data/IMCG-204112.R1.fq.gz -I /05_Hi-C/00_data/IMCG-204112.R2.fq.gz -o IMCG-204112.clean_R1.fq.gz -O IMCG-204112.clean_R2.fq.gz -R IMCG-204112 -h IMCG-204112.QC.html -j IMCG-204112.QC.json -s 40 -w 4
