@@ -1,6 +1,6 @@
 # T2T-goat1.0
-We assembled a telomere-to-telomere (T2T) gap-free genome (2.86 Gb) from a cashmere goat (T2T-goat1.0), which included a Y chromosome of 20.9 Mb, using ultralong ONT and PacBio HiFi reads together with Hi-C and Bionano data. 
-The scripts for T2T-goat1.0 are deposited in this website, including genome assembly, annotation, methylation, genome assessment, centromere repeat identification, etc. 
+We assembled a telomere-to-telomere (T2T) gap-free genome (2.86 Gb) from a cashmere goat (T2T-goat1.0), which included a Y chromosome of 20.9 Mb, using ultralong ONT and PacBio HiFi reads together with Hi-C and Bionano data.    
+The scripts for T2T-goat1.0 are deposited in this website, including genome assembly, annotation, methylation, genome assessment, centromere repeat identification, etc.    
 The T2T genome polish pipeline was developed combining PacBio and ONT long reads, and short reads, and it employs NextPolish, NextPolish2, and other dependencies to improve the genome quality greatly. 
 
 ## Descriptions
@@ -16,11 +16,11 @@ The polish pipeline was written based on WDL. It involves 8 steps of processing,
 Other dependent softwares are included in the \bin\bin directory
 
 #### Input    
-Low-quality genome fasta file to be polished is required.
+Low-quality genome fasta file to be polished is required.    
 The raw data (fastq) includes all the short and long reads, such as, PacBio long reads, ONT long reads, and short reads (MGI or Illumina).
 
 #### Usage    
-1. Provide the environment paths of the required softwares in the `software.json` file.  
+1. Provide the environment paths of the required softwares in the `software.json` file.    
 ```
 {
 	"yak":"/T2T_polish/version2.0/bin/bin/yak",
@@ -31,7 +31,7 @@ The raw data (fastq) includes all the short and long reads, such as, PacBio long
 	"Workflow":"/T2T_polish/version2.0/bin/"
 }
 ```   
-2. The running information is provided in the `run.json` file, including HiFi reads (hifi.fofn), memeory in the workstation, ONT reads (lgs.fofn), genome file to be polished (test.fa), sample name (test), short reads (sgs.fofn), cpus in the workstation (cpu).
+2. The running information is provided in the `run.json` file, including HiFi reads (hifi.fofn), memeory in the workstation, ONT reads (lgs.fofn), genome file to be polished (test.fa), sample name (test), short reads (sgs.fofn), cpus in the workstation (cpu).    
 ```
 {
   "nextPolish2.hifi_fofn": "/T2T_polish/version2.0/test/hifi.fofn",
@@ -45,29 +45,29 @@ The raw data (fastq) includes all the short and long reads, such as, PacBio long
   "nextPolish2.cpu": 20
 }
 ```    
-3. Run the polish workflow in the terminal.   
+3. Run the polish workflow in the terminal.    
 ```
 bash run.sh    
 ```
 
 #### Output    
-The polished genome .fa file is finally generated, with the consensus quality value (QV) of the polished genome is also provided. 
+The polished genome .fa file is finally generated, with the consensus quality value (QV) of the polished genome is also provided.    
 
-### The scripts for the goat T2T genome assembly     
+### The scripts for the goat T2T genome assembly (the directory: assembly)    
 nextdenovo.sh: Preliminary assembly based on ONT reads    
 run-hifiasm.sh: Assembling haploid genome contigs using HiFi reads    
 hifiasm_trio.sh: Assembling haplotype genome using HiFi reads and parental short reads    
 verkko.sh: Preliminary assembly based on HiFi reads and ONT reads
 
-### The scripts for annotation    
+### The scripts for annotation (the directory: annotation)      
 Repetitive element annotation, non-coding RNA annotation, gene structure prediction, and integration  
 
-### The scripts for centoremere    
+### The scripts for centoremere (the directory: centromere)      
 ChIP-seq: Aligning ChIP-seq data to the reference genome and performing peak calling    
 centromere_unit_identification: identifying centromere units using SRF software    
 identity_heatmap: the identity heatmap of centromere units using StainedGlass
  
-### The scripts for the T2T genome assessment    
+### The scripts for the T2T genome assessment (the directory: genome assessment)      
 QV: Evaluating genome QV and completeness based on short reads    
 SDs: genome segments duplications(SDs) identification and filtering    
 Methylation: Calling CpG methylation sites using HiFi reads and ONT reads respectively
