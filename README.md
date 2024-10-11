@@ -1,7 +1,7 @@
 # T2T-goat1.0
-Telomere-to-telomere (T2T) gap-free genome (2.86 Gb) was assembled for a cashmere goat (T2T-goat1.0), which included all autosomes and chromosomes X and Y (20.96 Mb), using MGI short reads, and ultralong ONT and PacBio HiFi long reads, together with Hi-C and Bionano data (see the citation in the end of this webpage).
-The scripts in the assembly of T2T-goat1.0, including genome assembly, annotation, methylation, genome assessment, centromere repeat identification, etc., are included here (see the pipeline below). 
-Especially, a T2T genome polish pipeline was developed in our paper, which supports flexible and multiple rounds of polishing based on PacBio, ONT, and short reads, and it employs NextPolish, NextPolish2, and other dependencies to improve the base-level quality, e.g., >50 QV score in T2T-goat1.0.
+Telomere-to-telomere (T2T) gap-free genome (2.86 Gb) was assembled for a cashmere goat (T2T-goat1.0), which included all autosomes and chromosomes X and Y (20.96 Mb), using MGI short reads, and ultralong ONT and PacBio HiFi long reads, together with Hi-C and Bionano data (see the citation in the end of this webpage).      
+The scripts in the assembly of T2T-goat1.0, including genome assembly, annotation, methylation, genome assessment, centromere repeat identification, etc., are included here (see the pipeline below).    
+   Especially, a T2T genome polish pipeline was developed in our paper, which supports flexible and multiple rounds of polishing based on PacBio, ONT, and short reads, and it employs NextPolish, NextPolish2, and other dependencies to improve the base-level quality, e.g., >50 QV score in T2T-goat1.0.
  
 
 ![Image text](https://github.com/Wuhui2024/CAU-T2T-Goat/blob/main/img_folder/pipeline-01.png)
