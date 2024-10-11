@@ -1,0 +1,15 @@
+
+plink --file plink_recode12 --distance-matrix --out distancematrix --allow-extra-chr --chr-set 29 --threads 100
+cut -f 1 -d ' ' plink_recode12.ped |paste - distancematrix.mdist >tree.mdist
+sed -i 's/	/          /g' tree.mdist
+line=`more tree.mdist|wc -l`
+line=$[line-3]
+sed -i "1i\\$line" tree.mdist
+echo -e "tree.mdist
+y
+" >>neighbor.bar
+/soft/phylip-3.697/exe/neighbor <neighbor.bar
+		
+touch phyliptree_done
+echo task done
+
