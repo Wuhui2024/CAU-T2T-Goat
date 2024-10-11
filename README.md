@@ -25,8 +25,18 @@ identity_heatmap: the identity heatmap of centromere units using StainedGlass
 ### The scripts for the T2T genome assessment (the directory: genome assessment)      
 QV: Evaluating genome QV and completeness based on short reads    
 SDs: genome segments duplications(SDs) identification and filtering    
-Methylation: Calling CpG methylation sites using HiFi reads and ONT reads respectively
+Methylation: Calling CpG methylation sites using HiFi reads and ONT reads respectively   
+PURs: Identification and compositional analysis of PUR regions   
+mapping: Reads alignment and coverage calculation      
 
+### The scripts for the SNP calling (the directory: SNP calling)      
+
+### The scripts for the population analysis (the directory: population)   
+Population structure analysis includes PCA, ADMIXTURE, and NJ tree      
+population selection analysis includes the calculation of Fst and XPCLR
+
+### The scripts for the SV calling (the directory: long_reads_SV_calling)      
+SV calling and merging.
 
 
 ## Using the polish pipeline and the scripts related to the assembly and analysis of T2T-goat1.0, please consider the followed citation.    
