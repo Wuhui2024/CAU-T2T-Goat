@@ -1,0 +1,42 @@
+
+cat plink_recode12.ped |grep -w -f jiayang.list > snp.ld_filter.jiayang.ped
+
+/home/miniconda3/envs/EIGEN/bin/smartpca -p par.txt
+
+cat pop.file |grep -w -f jiayang.list > pop.jiayang.file
+
+echo -e 'library(ggplot2)
+pcadata=read.table("pop.pca",head=F)
+pc1pc2=paste("PCA",".pc1pc2.pdf",sep="")
+pc1pc3=paste("PCA",".pc1pc3.pdf",sep="")
+pc2pc3=paste("PCA",".pc2pc3.pdf",sep="")
+colors=c("red","blue","orange","green","pink","purple","cyan","brown")
+pdf(pc1pc2)
+
+ggplot(data= pcadata, aes(x = pcadata[,2], y = pcadata[,3])) +
+                      geom_point(aes(colour=pcadata[,5]))+
+                      theme(legend.title = element_blank())+
+                      xlab("PC1")+ylab("PC2")+
+                      scale_colour_manual(values=colors)
+dev.off()
+pdf(pc1pc3)
+
+ggplot(data= pcadata, aes(x = pcadata[,2], y = pcadata[,4])) +
+                      geom_point(aes(colour=pcadata[,5]))+
+                      theme(legend.title = element_blank())+
+                      xlab("PC1")+ylab("PC3")+
+                      scale_colour_manual(values=colors)
+dev.off()
+pdf(pc2pc3)
+
+ggplot(data= pcadata, aes(x = pcadata[,3], y = pcadata[,4])) +
+                      geom_point(aes(colour=pcadata[,5]))+
+                      theme(legend.title = element_blank())+
+                      xlab("PC2")+ylab("PC3")+
+                      scale_colour_manual(values=colors)
+dev.off()' >> smartpca.R
+/home/miniconda3/envs/R4.2.2/bin/Rscript smartpca.R
+		
+touch smartpca_done
+echo task done
+date
