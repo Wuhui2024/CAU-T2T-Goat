@@ -3,6 +3,7 @@ We assembled a telomere-to-telomere (T2T) gap-free genome (2.86 Gb) from a cashm
 The scripts for T2T-goat1.0 are deposited in this website, including genome assembly, annotation, methylation, genome assessment, centromere repeat identification, etc.    
 The T2T genome polish pipeline was developed combining PacBio and ONT long reads, and short reads, and it employs NextPolish, NextPolish2, and other dependencies to improve the genome quality greatly. 
 
+![Image text](https://github.com/Wuhui2024/CAU-T2T-Goat/blob/main/img_folder/pipeline-01.png)
 ## Descriptions
 
   
